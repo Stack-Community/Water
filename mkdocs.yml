@@ -1,0 +1,44 @@
+site_name: Water
+
+repo_url: https://github.com/stack-community/water
+repo_name: View source code
+
+edit_uri: edit/main/docs/
+
+nav:
+    - Home: "index.md"
+    - Getting Started: "gettingstarted.md"
+
+theme:
+        logo: Water.png
+        favicon: favicon.ico
+        font:
+                text: Tilt Neon
+        name: material
+        palette:
+                primary: black
+                accent: black
+
+        features:
+                - content.code.annotate 
+                - header.autohide
+                - navigation.sections
+                - navigation.expand
+
+markdown_extensions:
+    - attr_list
+    - pymdownx.emoji:
+            emoji_index: !!python/name:materialx.emoji.twemoji
+            emoji_generator: !!python/name:materialx.emoji.to_svg
+    - abbr
+    - pymdownx.snippets
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.highlight:
+            anchor_linenums: true
+            line_spans: __span
+            pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.tabbed:
+            alternate_style: true 
