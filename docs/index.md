@@ -12,7 +12,7 @@ To install **Water,** run the following command.
 === "Release"
 
     ``` bash
-        pip install water
+        pip install Water-GM
     ```
 
 This will install the latest version of **Water** however, the option to install specific version of water is presented.

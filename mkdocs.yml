@@ -24,9 +24,12 @@ theme:
                 - header.autohide
                 - navigation.sections
                 - navigation.expand
+                - content.code.copy
+
 
 markdown_extensions:
     - attr_list
+    - footnotes
     - pymdownx.emoji:
             emoji_index: !!python/name:materialx.emoji.twemoji
             emoji_generator: !!python/name:materialx.emoji.to_svg
