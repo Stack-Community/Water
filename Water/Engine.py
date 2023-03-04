@@ -4,10 +4,9 @@ import logging
 logging.basicConfig(level=logging.DEBUG, filename="log.log", filemode="w",
                     format="%(asctime)s - %(levelname)s - %(message)s")
 
-yes_lib = ["Y", "y", "Yes", "yes"]
-no_lib = ["N", "n", "No", "no"]
+yes_lib = ["y", "yes"]
+no_lib = ["n", "no"]
 
-BUILD_NUMBER = "Y23B2R010"
 log = logging
 
 
@@ -32,35 +31,29 @@ class UI:
         A collection of conditions developers can use to implement into their project(s).
         """
         @staticmethod
-        def meet(statement: str) -> bool:
+        def meet(statement: str, default_value: bool = None) -> bool:
             """
             Gives a "Yes or No" statement with a loop to ensure a correct response
             :param statement: The statement (prompt) the user has tp say yes or no to
+            :param default_value: If user value returns nothing, this default value will replace it. (Bool)
             :return: True or False depending on the user response
             """
             loop = True
             while loop:
-                userchoice: str = input(f"\n{statement} | Y or N (Yes or No)\n")
+                userchoice: str = input(f"\n{statement} | Y or N (Yes or No)\n").lower()
 
                 if userchoice in yes_lib:
-                    log.debug(f"User responded to UI.Conditions.meet with ({userchoice}) statement. | Engine Module")
+                    log.debug(f"User responded to UI.Conditions.meet with `{userchoice}` statement. | Engine Module")
                     return True
                 elif userchoice in no_lib:
-                    log.debug(f"User responded to UI.Conditions.meet with ({userchoice}) statement. | Engine Module")
+                    log.debug(f"User responded to UI.Conditions.meet with `{userchoice}` statement. | Engine Module")
                     return False
                 else:
+                    if default_value is not None:
+                        log.debug(
+                            f"User responded to UI.Conditions.meet was unrecognized but default value of `{default_value}` was provided. | Engine Module")
+                        return default_value
+                    log.warning(
+                        f"User responded to UI.Conditions.meet, but the response was `{userchoice}`. | Engine Module")
                     print("Wrong choice, see the list for all compatible words.\n")
-                    log.warning("User responded to UI.Conditions.meet however, the value was invaild. | Engine Module")
 
-
-class Boneworks:
-    """
-    Major Release / Engine information
-    """
-    @staticmethod
-    def buildinfo():
-        """
-        Gives the build number
-        :return: BUILD_NUMBER
-        """
-        print(BUILD_NUMBER)

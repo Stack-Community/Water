@@ -1,4 +1,5 @@
-Water is a **modular terminal game engine,** and this page will show you how to use its UI functions.
+<!-- Water"
+ is a **modular terminal game engine,** and this page will show you how to use its UI functions. -->
 
 !!! Info
     This documentation page assumes you've installed Water and made a project.
@@ -27,6 +28,7 @@ We've officially set up the foundations of the Water Engine and the submodule ca
 Using the foundation we've made, we can start using the engine to our needs.
 
 Let's make a call to a function in the UI submodule. To do that, we use these lines of code.
+
 ```py
 from Water import Engine
 
@@ -34,10 +36,12 @@ UI = Engine.UI # User input / interface
 
 UI.prompt("What's your name?")
 ```
+
 UI.prompt is the fancy version of asking a question to the user. 
 There's an option to make it save the response by making it into a variable.
 !!! Tip
     "prompt" function always returns the user input.
+
     ```py
     response = UI.prompt("What's your name?")
     ```

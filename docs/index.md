@@ -25,3 +25,7 @@ This will install the latest version of **Water** however, the option to install
 ### Getting started with Water
 
 View [Getting started](gettingstarted.md) to build your first water project.
+
+## API Reference
+
+View [API Reference](api.md) for detailed documentation of the aspects of the API.

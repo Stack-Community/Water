@@ -6,10 +6,13 @@ repo_name: View source code
 edit_uri: edit/main/docs/
 
 nav:
-    - Home: "index.md"
-    - Getting Started: "gettingstarted.md"
+        - Home: "index.md"
+        - Getting Started: "gettingstarted.md"
+        - API:
+                - API Reference: "api.md"
 
 theme:
+       
         logo: Water.png
         favicon: favicon.ico
         font:
@@ -18,9 +21,19 @@ theme:
         palette:
                 primary: black
                 accent: black
+                scheme: default
+                toggle:
+                        icon: material/brightness-7 
+                        name: Switch to dark mode
+
+        # Palette toggle for dark mode
+                scheme: slate
+                toggle:
+                        icon: material/brightness-4
+                        name: Switch to light mode
 
         features:
-                - content.code.annotate 
+                - content.code.annotate
                 - header.autohide
                 - navigation.sections
                 - navigation.expand
