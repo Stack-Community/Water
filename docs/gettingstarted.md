@@ -62,8 +62,16 @@ So, when we call a function called meet, what we're really doing is asking a tru
 !!! Note
     Conditions.meet has a builtin loop to ensure it gets the right response from a dictionary.
 
+??? Hint
+    Conditions.meet also has a configurable default value you can set.
+    You can set the default value by doing this
+    ```py
+    UI.Conditions.meet(f"Ok, {response}. Does apples come from trees?", default_value=Yes)
+    ```
+
 Let's use our "meet_response" variable to add a response to the user's choice.
 We can achieve this by doing this.
+
 ```py
 from Water import Engine
 
