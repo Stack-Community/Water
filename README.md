@@ -23,3 +23,5 @@ To install **Water,** run the following command.
 ```bash
 pip install Water-GM
 ```
+
+> 0.1.x Family is currently supported!
